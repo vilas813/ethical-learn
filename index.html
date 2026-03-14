@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ethical Learn</title>
+    <style>
+      :root {
+        --bg: #0b1220;
+        --surface: #121c2a;
+        --text: #e8f0ff;
+        --muted: #a3b1c2;
+        --accent: #4fb6ff;
+        --radius: 14px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: radial-gradient(circle at top, #1b2c4a 0%, #05080f 55%, #03040a 100%);
+        color: var(--text);
+        line-height: 1.5;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 3.5rem 1.5rem 4rem;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.25rem 0;
+      }
+
+      header h1 {
+        font-size: 1.5rem;
+        letter-spacing: -0.02em;
+        margin: 0;
+      }
+
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        margin-left: 1.4rem;
+        font-weight: 600;
+      }
+
+      nav a:hover {
+        color: var(--accent);
+      }
+
+      .hero {
+        display: grid;
+        gap: 2.5rem;
+        padding: 3.5rem 0;
+      }
+
+      .hero h2 {
+        margin: 0 0 1rem;
+        font-size: clamp(2.2rem, 4vw, 3rem);
+      }
+
+      .hero p {
+        max-width: 44ch;
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 0.95rem 1.6rem;
+        border-radius: 999px;
+        border: 2px solid transparent;
+        font-weight: 700;
+        background: linear-gradient(135deg, rgba(79, 182, 255, 0.25), rgba(44, 134, 255, 0.13));
+        color: var(--text);
+        text-decoration: none;
+        transition: transform 120ms ease, filter 120ms ease;
+      }
+
+      .cta:hover {
+        transform: translateY(-1px);
+        filter: saturate(1.2);
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.25rem;
+        margin-top: 3rem;
+      }
+
+      .feature {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: var(--radius);
+        padding: 1.5rem;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      }
+
+      .feature h3 {
+        margin-top: 0;
+        font-size: 1.1rem;
+      }
+
+      .feature p {
+        color: var(--muted);
+        margin: 0.75rem 0 0;
+      }
+
+      footer {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        padding: 2.5rem 0 1rem;
+        text-align: center;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      footer a {
+        color: var(--muted);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      footer a:hover {
+        color: var(--accent);
+      }
+
+      @media (max-width: 520px) {
+        header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        nav {
+          margin-top: 1rem;
+        }
+
+        .container {
+          padding: 2.5rem 1.25rem 3rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Ethical Learn</h1>
+        <nav>
+          <a href="#about">About</a>
+          <a href="#features">Features</a>
+          <a href="#contact">Contact</a>
+          <a href="login.html">Log in</a>
+          <a href="signup.html">Sign up</a>
+        </nav>
+      </header>
+
+      <section class="hero" id="about">
+        <div>
+          <h2>Learn with integrity. Build with purpose.</h2>
+          <p>
+            Ethical Learn is a clean, modern starter homepage for projects that focus on responsible
+            learning, open privacy, and thoughtful design. Use this template as a foundation for your
+            next web project.
+          </p>
+          <a class="cta" href="#features">Explore features</a>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="feature">
+          <h3>Simple structure</h3>
+          <p>
+            A clear layout that is easy to extend—perfect for adding pages, documentation, or interactive
+            learning content.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Responsive design</h3>
+          <p>
+            Looks great on desktop, tablet, and mobile devices without any extra setup.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Minimal dependencies</h3>
+          <p>
+            No external libraries or frameworks required; everything is built with standard HTML and CSS.
+          </p>
+        </div>
+      </section>
+
+      <footer id="contact">
+        <p>
+          Made with care for ethical learning experiences —
+          <a href="mailto:hello@ethicallearn.example">Contact us</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
