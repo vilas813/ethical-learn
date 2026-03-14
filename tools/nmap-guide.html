@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nmap - Ethical Learn</title>
+    <title>Nmap Detailed Guide - Ethical Learn</title>
     <style>
       :root {
         --bg: #0b1220;
@@ -68,6 +68,12 @@
         margin-bottom: 1rem;
       }
 
+      h3 {
+        color: var(--accent);
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
       p {
         margin-bottom: 1rem;
       }
@@ -86,6 +92,9 @@
         padding: 0.2rem 0.4rem;
         border-radius: 4px;
         font-family: 'Courier New', monospace;
+        display: block;
+        margin: 0.5rem 0;
+        white-space: pre-wrap;
       }
 
       footer {
@@ -129,25 +138,56 @@
         <nav>
           <a href="../index.html">Home</a>
           <a href="../about.html">About</a>
+          <a href="nmap.html">Back to Nmap</a>
           <a href="../login.html">Login</a>
           <a href="../signup.html">Signup</a>
         </nav>
       </header>
 
       <div class="content">
-        <h2>Nmap क्या है?</h2>
-        <p>Nmap एक network scanning tool है। यह tool Kali Linux में available है और ethical hacking में इस्तेमाल होता है।</p>
+        <h2>1️⃣ Nmap क्या है</h2>
+        <p>Nmap (Network Mapper) एक बहुत famous network scanning और security auditing tool है। इसका उपयोग ethical hackers और security researchers करते हैं。</p>
+        <p>Nmap से आप ये काम कर सकते हो:</p>
+        <ul>
+          <li>Network में live devices (hosts) पता करना</li>
+          <li>Open ports check करना</li>
+          <li>Server पर कौन-सी services चल रही हैं देखना</li>
+          <li>Operating System detect करना</li>
+          <li>Network security vulnerability analysis करना</li>
+        </ul>
+        <p>Example: अगर किसी website/server पर कौन-सा port खुला है यह जानना हो तो Nmap use किया जाता है।</p>
 
-        <p><a href="nmap-guide.html" style="color: var(--accent); text-decoration: underline;">Detailed Nmap Guide पढ़ें</a></p>
+        <h2>2️⃣ Kali NetHunter में Installation</h2>
+        <p>Kali NetHunter में Nmap usually पहले से installed होता है。</p>
+        <p>अगर नहीं है तो install करने के लिए:</p>
+        <code>apt update
+apt install nmap</code>
+        <p>Install check करने के लिए:</p>
+        <code>nmap --version</code>
 
-        <h2>Basic Usage</h2>
-        <p>इस tool का basic usage सीखने के लिए Kali Linux में install करें और documentation पढ़ें।</p>
+        <h2>3️⃣ Basic Usage Commands</h2>
+        <h3>1. Simple Scan</h3>
+        <code>nmap example.com</code>
+        <p>यह target website के open ports scan करेगा।</p>
 
-        <h2>Kali Linux में Install करना</h2>
-        <p>अधिकतर tools by default installed होते हैं। अगर नहीं तो <code>sudo apt install nmap</code></p>
+        <h3>2. IP Range Scan</h3>
+        <code>nmap 192.168.1.1-100</code>
+        <p>यह 1 से 100 तक के devices scan करेगा।</p>
 
-        <h2>Important Note</h2>
-        <p>इस tool का उपयोग केवल educational और authorized purposes के लिए करें।</p>
+        <h3>3. Specific Port Scan</h3>
+        <code>nmap -p 80 example.com</code>
+        <p>यह सिर्फ port 80 scan करेगा।</p>
+
+        <h3>4. OS Detection</h3>
+        <code>nmap -O example.com</code>
+        <p>यह server का operating system detect करने की कोशिश करेगा।</p>
+
+        <h3>5. Service Version Detection</h3>
+        <code>nmap -sV example.com</code>
+        <p>यह बताएगा कि server पर कौन-सी service और version चल रहा है।</p>
+
+        <h2>💡 Pro Tip (Ethical Hacking)</h2>
+        <p>Nmap का use हमेशा legal penetration testing या learning lab में ही करना चाहिए।</p>
       </div>
 
       <footer>
